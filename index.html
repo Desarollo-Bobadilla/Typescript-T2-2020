@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Taller 1</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    
+	<!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+	<!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!-- Lindos y gorditos -->
+    <link 
+        rel = "stylesheet"
+        href = "styles.css"
+    >
+    
+</head>
+<body>
+    <main>
+
+        <!-- Izquierda -->
+        <section class="col-xs-12 col-sm-12 col-md-6">
+
+            <!-- Creo el panel -->
+            <article class="panel panel-default">
+
+                <!-- Yo -->
+                <h1 id = 'stu-name'></h1>
+
+                <!-- Foto -->
+                <img id = 'stu-img'>
+
+                <!-- Datos -->
+                <h2>Datos Personales</h2>
+
+                <!-- Tabla de datos -->
+                <table id='stu-table' class = "table">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+        </section>
+
+        <!-- Derecha -->
+        <section class="col-xs-12 col-md-6">
+
+            <!-- Creo el panel -->
+            <article class="panel panel-default">
+
+                <!-- Titulo-->
+                <h2>Cursos Actuales</h2>
+
+                <!-- Filtro por Nombre-->
+                <form style="margin:3px;">
+                    <div class="form-row">
+                      <div class="col-xs-10">
+                          <input type="text" class="form-control" id="search-box" placeholder="Filtrar por nombre">
+                      </div>
+                      <div class="col-xs-2">
+                          <button type="button" id="button-filterByName" class="btn btn-success">Ejecutar</button>
+                      </div>
+                    </div>
+                    <div class = "bla">""</div>
+                </form>
+
+                <!-- Filtro por Rango-->
+                <form style="margin:3px;">
+                    <div class="form-row">
+                      <div class="col-xs-5">
+                          <input type="text" class="form-control" id="min-box" placeholder="Creditos mínimos">
+                      </div>
+                      <div class="col-xs-5">
+                        <input type="text" class="form-control" id="max-box" placeholder="Creditos máximos">
+                    </div>
+                      <div class="col-xs-2">
+                          <button type="button" id="button-filterByRange" class="btn btn-success">Ejecutar</button>
+                      </div>
+                    </div>
+                    <div class = "bla">""</div>
+                </form>
+
+                 <!-- Materias -->
+                <table class="table">
+                    <thead class="thead-dark">
+                       <tr>
+                          <th class = "titulo">Curso</th>
+                          <th class = "titulo">Profesor</th>
+                          <th class = "titulo">Créditos</th>
+                       </tr>
+                    </thead>
+                    <tbody id="courses">
+                    </tbody>
+                </table>
+
+                <!-- Creditos -->
+                <h2 id = "total-credits">Total Créditos </h2>
+            </article>
+        </section>
+    </main>
+
+    <!-- Funciones -->
+    <script type="module" src="./scripts/ts/main.js"></script>
+</body>
